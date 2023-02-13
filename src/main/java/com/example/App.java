@@ -1,4 +1,4 @@
-package com.gmail;
+package com.example;
 
 /**
  * Hello world!
