@@ -29,9 +29,9 @@ public class BasePageREG {
 
     }
 
-    @AfterClass
-    public void tearDown(){
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
 }

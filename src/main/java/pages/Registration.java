@@ -20,10 +20,9 @@ public class Registration {
     By ConfemailTextBox = By.name("reg_email_confirmation__");
     By passwordTextBox = By.name("reg_passwd__");
 
-//    Select selDay = new Select((WebElement) By.id("day"));
-//    Select selMonth = new Select((WebElement) By.id("month"));
-//    Select selYear = new Select((WebElement) By.id("year"));
-
+    By selDay = By.id("day");
+    By selMonth = By.id("month");
+    By selYear = By.id("year");
     By GenderFemale = By.cssSelector("[class='_8esa']");
     By SignupButton = By.cssSelector("[name='websubmit']");
 
@@ -43,18 +42,25 @@ public class Registration {
     public void passworddata(String password){
         driver.findElement(passwordTextBox).sendKeys(password);
     }
+
 //    public void SelDayMonthYear(int day , int month , int year){
 //        driver.findElement(selDay.selectByValue());
 //    }
-//    public void selday(String day){
+    public void selday(String day){
+        Select daydropdown = new Select(driver.findElement(selDay));
+        daydropdown.selectByValue(day);
 //       selDay.selectByValue(day);
-//    }
-//    public void selmonth(String month){
+    }
+    public void selmonth(String month){
+        Select monthdropdown = new Select(driver.findElement(selMonth));
+        monthdropdown.selectByValue(month);
 //        selMonth.selectByValue(month);
-//    }
-//    public void selyear(String year){
+    }
+    public void selyear(String year){
+        Select yeardropdown = new Select(driver.findElement(selYear));
+        yeardropdown.selectByValue(year);
 //        selYear.selectByValue(year);
-//    }
+    }
     public void genderfemale(){
         driver.findElement(GenderFemale).click();
     }
