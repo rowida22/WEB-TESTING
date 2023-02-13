@@ -16,9 +16,9 @@ public class TC_Registration extends BasePageREG {
         regFB.emaildata("testselenium@gmail.com");
         regFB.confemaildata("testselenium@gmail.com");
         regFB.passworddata("test123@456");
-        regFB.selday("23");
-        regFB.selmonth("12");
-        regFB.selyear("1992");
+//        regFB.selday("23");
+//        regFB.selmonth("12");
+//        regFB.selyear("1992");
         regFB.genderfemale();
         regFB.signupbutton();
     }

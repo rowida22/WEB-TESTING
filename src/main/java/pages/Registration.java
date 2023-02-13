@@ -14,26 +14,18 @@ public class Registration {
         this.driver = driver;
     }
 
-    @FindBy(name = "firstname") WebElement FnameTextBox;
-    @FindBy(name = "lastname") WebElement LnameTextBox;
-    @FindBy(name = "reg_email__") WebElement EamilTextBox;
-    @FindBy(name = "reg_email_confirmation__") WebElement ConfemailTextBox;
-    @FindBy(name = "reg_passwd__") WebElement passwordTextBox;
+    By FnameTextBox = By.name("firstname");
+    By LnameTextBox = By.name("lastname");
+    By EamilTextBox = By.name("reg_email__");
+    By ConfemailTextBox = By.name("reg_email_confirmation__");
+    By passwordTextBox = By.name("reg_passwd__");
 
-
-
-
-//    By FnameTextBox = By.name("firstname");
-//    By LnameTextBox = By.name("lastname");
-//    By EamilTextBox = By.name("reg_email__");
-//    By ConfemailTextBox = By.name("reg_email_confirmation__");
-//    By passwordTextBox = By.name("reg_passwd__");
 //    Select selDay = new Select((WebElement) By.id("day"));
 //    Select selMonth = new Select((WebElement) By.id("month"));
 //    Select selYear = new Select((WebElement) By.id("year"));
-//
-//    By GenderFemale = By.cssSelector("[class='_8esa']");
-//    By SignupButton = By.cssSelector("[name='websubmit']");
+
+    By GenderFemale = By.cssSelector("[class='_8esa']");
+    By SignupButton = By.cssSelector("[name='websubmit']");
 
     // may we should put mytouch on it a lil edit
     public void fnamedata(String fname){
@@ -52,34 +44,22 @@ public class Registration {
         driver.findElement(passwordTextBox).sendKeys(password);
     }
 //    public void SelDayMonthYear(int day , int month , int year){
-//        driver.findElement(selDay.selectByValue();)
+//        driver.findElement(selDay.selectByValue());
 //    }
-
-    public void selday(String day){
-       selDay.selectByValue(day);
-    }
-    public void selmonth(String month){
-        selMonth.selectByValue(month);
-    }
-    public void selyear(String year){
-        selYear.selectByValue(year);
-    }
-
+//    public void selday(String day){
+//       selDay.selectByValue(day);
+//    }
+//    public void selmonth(String month){
+//        selMonth.selectByValue(month);
+//    }
+//    public void selyear(String year){
+//        selYear.selectByValue(year);
+//    }
     public void genderfemale(){
         driver.findElement(GenderFemale).click();
-
     }
     public void signupbutton(){
         driver.findElement(SignupButton).click();
     }
-
-
-
-
-
-
-
-
-
 
 }

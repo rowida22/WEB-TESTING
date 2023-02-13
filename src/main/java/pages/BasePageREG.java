@@ -17,14 +17,14 @@ public class BasePageREG {
 
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().driverVersion("110.0.5481.78").setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         driver.switchTo().newWindow(WindowType.TAB);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
-        driver.navigate().to("https://www.facebook.com/signup/");
+        driver.navigate().to("https://www.facebook.com/signup");
         Registration = new Registration(driver);
 
     }

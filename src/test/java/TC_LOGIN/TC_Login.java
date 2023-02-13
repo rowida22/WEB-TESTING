@@ -20,8 +20,4 @@ public class TC_Login extends BasePage{
     Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
 
   }
-
-
-
-
 }
