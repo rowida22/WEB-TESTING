@@ -12,7 +12,7 @@ public class TC_Login extends BasePage{
 
   @Test
   public void loginTest1(){
-    // PageFactory It is a class that is provided by Selenium Webdriver.
+
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("test@123");
     logFB.passworddata("123456");
