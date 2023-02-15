@@ -11,10 +11,10 @@ public class TC_Registration extends BasePageREG {
     @Test
     public void regTest1(){
         Registration regFB = PageFactory.initElements(driver, Registration.class);
-        regFB.fnamedata("test");
-        regFB.lnamedata("selenium");
-        regFB.emaildata("testselenium@gmail.com");
-        regFB.confemaildata("testselenium@gmail.com");
+        regFB.fnamedata("mai");
+        regFB.lnamedata("ahmed");
+        regFB.emaildata("mainahmed@gmail.com");
+        regFB.confemaildata("mainahmed@gmail.com");
         regFB.passworddata("test123@456");
         regFB.selday("23");
         regFB.selmonth("12");

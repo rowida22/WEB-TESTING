@@ -1,7 +1,5 @@
 package pages;
 
-
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -41,6 +39,7 @@ public class BasePage {
     driver.quit();
 
   }
+
   @AfterMethod
   public void takeScreenShot(){
     File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

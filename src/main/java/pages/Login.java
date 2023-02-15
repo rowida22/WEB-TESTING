@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Login {
 
-   WebDriver driver;
+  WebDriver driver;
 
   public Login(WebDriver driver) {
     this.driver = driver;
@@ -16,6 +16,10 @@ public class Login {
   By emailTextBox = By.name("email");
   By passwordTextBox = By.name("pass");
   By LoginButton = By.name("login");
+  By searchBar = By.xpath("//*[@id=\"mount_0_0_5+\"]/div/div[1]/div/div[2]/div[2]/div[1]/div/div/div[3]/div/div[2]/div/div/div/div/label/input");
+
+//  By Post = By.xpath("//*[@id=\"mount_0_0_5+\"]/div/div[1]/div/div[6]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div");
+//  By createPost = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6']");
 //  @FindBy(name = "email") WebElement emailTextBox;
 //  @FindBy(name = "pass") WebElement passwordTextBox;
 //  @FindBy(name = "login") WebElement  LoginButton;
@@ -41,6 +45,16 @@ public class Login {
   }
 //  public void loginButton(){
 //    LoginButton.click();}
+
+//  public void setCreatePost(String post){
+//    driver.findElement(createPost).sendKeys(post);
+////    driver.findElement(Post).click();
+//  }
+
+  public void SearchBar(String searchOnAccount){
+    driver.findElement(searchBar).sendKeys(searchOnAccount);
+
+  }
 
   public boolean forgetPass(){
     return driver.findElement(msgError).isDisplayed();
