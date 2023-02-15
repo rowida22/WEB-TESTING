@@ -18,5 +18,9 @@ public class TC_NEWPAGE extends BasePage {
         cpFB.emaildata("fakedata");
         cpFB.passworddata("fakedata");
         cpFB.loginButton();
+        cpFB.pagenamedata("Testing by Selenium");
+        cpFB.categorydata("Information Technology Company");
+        cpFB.clickcreatebutton();
     }
 }
+//fakedata
