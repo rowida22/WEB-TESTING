@@ -34,21 +34,21 @@ public class BasePage {
 
   }
 
-   @AfterClass
-   public void tearDown() {
-    driver.quit();
-
-  }
-
-  @AfterMethod
-  public void takeScreenShot(){
-    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-    try {
-        FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
-
-  }
+//   @AfterClass
+//   public void tearDown() {
+//    driver.quit();
+//
+//  }
+//
+//  @AfterMethod
+//  public void takeScreenShot(){
+//    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//    try {
+//        FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
+//    } catch (IOException e) {
+//        throw new RuntimeException(e);
+//    }
+//
+//  }
 
 }
