@@ -15,8 +15,8 @@ public class TC_NEWPAGE extends BasePage {
         cpFB.createpage();
         cpFB.communitypage();
         Assert.assertTrue(true, String.valueOf(cpFB.msgMustLogin()));
-        cpFB.emaildata("rowida.abasirii@outlook.com");
-        cpFB.passworddata("test123@456");
+        cpFB.emaildata("fakedata");
+        cpFB.passworddata("fakedata");
         cpFB.loginButton();
         cpFB.pagenamedata("Testing by Selenium");
         cpFB.categorydata("Information Technology Company");
