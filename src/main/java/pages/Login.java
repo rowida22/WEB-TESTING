@@ -1,6 +1,8 @@
 package pages;
 
+import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +18,14 @@ public class Login {
   By emailTextBox = By.name("email");
   By passwordTextBox = By.name("pass");
   By LoginButton = By.name("login");
-  By searchBar = By.xpath("//*[@id=\"mount_0_0_5+\"]/div/div[1]/div/div[2]/div[2]/div[1]/div/div/div[3]/div/div[2]/div/div/div/div/label/input");
 
-//  By Post = By.xpath("//*[@id=\"mount_0_0_5+\"]/div/div[1]/div/div[6]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div");
-//  By createPost = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6']");
+//  Should i put it in Welcomepage?
+  By SearchBar = By.xpath("//input[@placeholder=\"Search Facebook\"]");
+
+//  By CreatePost = By.cssSelector("[class='x1lkfr7t xkjl1po x1mzt3pk xh8yej3 x13faqbe xi81zsa']");
+//
+//  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
+
 //  @FindBy(name = "email") WebElement emailTextBox;
 //  @FindBy(name = "pass") WebElement passwordTextBox;
 //  @FindBy(name = "login") WebElement  LoginButton;
@@ -27,39 +33,38 @@ public class Login {
   By msgError = By.xpath("//*[@id=\"email_container\"]/div[2]");
 
 
-  public void emaildata(String emailfield){
+  public void emaildata(String emailfield) {
     driver.findElement(emailTextBox).sendKeys(emailfield);
 //    emailTextBox.sendKeys(emailfield);
   }
 
-  public void passworddata(String passfield){
+  public void passworddata(String passfield) {
     driver.findElement(passwordTextBox).sendKeys(passfield);
   }
-//  public void passworddata( String passfield){
-//    passwordTextBox.sendKeys(passfield);
-//
-//  }
 
-  public void loginButton(){
+  public void loginButton() {
     driver.findElement(LoginButton).click();
   }
-//  public void loginButton(){
-//    LoginButton.click();}
 
-//  public void setCreatePost(String post){
-//    driver.findElement(createPost).sendKeys(post);
-////    driver.findElement(Post).click();
-//  }
-
-  public void SearchBar(String searchOnAccount){
-    driver.findElement(searchBar).sendKeys(searchOnAccount);
-
-  }
-
-  public boolean forgetPass(){
+  public boolean forgetPass() {
     return driver.findElement(msgError).isDisplayed();
 
   }
 
+  public void searchbardata(String SerachForAcc){
+    driver.findElement(SearchBar).sendKeys(SerachForAcc);
 
+  }
+  public void Enter(){
+    driver.findElement(SearchBar).sendKeys(Keys.ENTER);
+  }
+
+
+//  public void createpostdata(String Post){
+//    driver.findElement(CreatePost).sendKeys(Post);
+//  }
+//
+//  public void clickpostbutton(){
+//    driver.findElement(PostButton).click();
+//  }
 }
