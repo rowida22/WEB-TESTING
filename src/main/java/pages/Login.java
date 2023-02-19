@@ -31,7 +31,10 @@ public class Login {
 //  @FindBy(name = "login") WebElement  LoginButton;
 
   By msgError = By.xpath("//*[@id=\"email_container\"]/div[2]");
+  //////////////////////////////////////////////////////////
+//  LogOut Section
 
+  By ProfileOption = By.xpath("//*[@id=\"mount_0_0_7E\"]/div/div[1]/div/div[2]/div[3]/div[1]/span/div/div[1]/div/div[2]/div/div[1]/svg");
 
   public void emaildata(String emailfield) {
     driver.findElement(emailTextBox).sendKeys(emailfield);
@@ -67,4 +70,11 @@ public class Login {
 //  public void clickpostbutton(){
 //    driver.findElement(PostButton).click();
 //  }
+  //////////////////////////////////////////////////////////
+//  LogOut Section
+
+  public void profileoption(){
+    driver.findElement(ProfileOption).click();
+  }
+
 }
