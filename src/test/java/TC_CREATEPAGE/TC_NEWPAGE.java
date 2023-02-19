@@ -9,14 +9,14 @@ import pages.CreatePage;
 public class TC_NEWPAGE extends BasePage {
 
     @Test
-    public void createpageTest1(){
-        //cpFB=create page
-        CreatePage cpFB = PageFactory.initElements(driver , CreatePage.class);
+    public void createpageTest1() {
+        // cpFB=create page
+        CreatePage cpFB = PageFactory.initElements(driver, CreatePage.class);
         cpFB.createpage();
         cpFB.communitypage();
         Assert.assertTrue(true, String.valueOf(cpFB.msgMustLogin()));
-        cpFB.emaildata("fakedata");
-        cpFB.passworddata("fakedata");
+        cpFB.emaildata("FakeData");
+        cpFB.passworddata("FakeData");
         cpFB.loginButton();
         cpFB.pagenamedata("Testing by Selenium");
         cpFB.categorydata("Information Technology Company");
@@ -24,4 +24,3 @@ public class TC_NEWPAGE extends BasePage {
         cpFB.clickcreatebutton();
     }
 }
-//fakedata

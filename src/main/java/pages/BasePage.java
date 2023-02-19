@@ -20,8 +20,8 @@ public class BasePage {
   public static WebDriver driver;
   Login login;
 
-   @BeforeClass
-   public void setUp() {
+  @BeforeClass
+  public void setUp() {
 
     WebDriverManager.chromedriver().driverVersion("109.0.5414.74").setup();
     driver = new ChromeDriver();
@@ -34,21 +34,21 @@ public class BasePage {
 
   }
 
-//   @AfterClass
-//   public void tearDown() {
-//    driver.quit();
-//
-//  }
-//
-//  @AfterMethod
-//  public void takeScreenShot(){
-//    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//    try {
-//        FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
-//    } catch (IOException e) {
-//        throw new RuntimeException(e);
-//    }
-//
-//  }
+  @AfterClass
+  public void tearDown() {
+    driver.quit();
+
+  }
+
+  @AfterMethod
+  public void takeScreenShot() {
+    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    try {
+      FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+
+  }
 
 }
