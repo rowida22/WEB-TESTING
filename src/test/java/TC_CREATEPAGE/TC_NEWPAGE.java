@@ -20,8 +20,7 @@ public class TC_NEWPAGE extends BasePage {
         cpFB.loginButton();
         cpFB.pagenamedata("Testing By Selenium");
         cpFB.categorydata("Information Technology Company");
-        cpFB.SelCategoryOption();
-//        cpFB.SelCategoryOption();
+        cpFB.SelCategoryOption("Information Technology Company");
         cpFB.clickcreatebutton();
     }
 }
