@@ -15,12 +15,13 @@ public class TC_NEWPAGE extends BasePage {
         cpFB.createpage();
         cpFB.communitypage();
         Assert.assertTrue(true, String.valueOf(cpFB.msgMustLogin()));
-        cpFB.emaildata("FakeData");
-        cpFB.passworddata("FakeData");
+        cpFB.emaildata("rowida.abasirii@outlook.com");
+        cpFB.passworddata("test123@456");
         cpFB.loginButton();
-        cpFB.pagenamedata("Testing by Selenium");
+        cpFB.pagenamedata("Testing By Selenium");
         cpFB.categorydata("Information Technology Company");
-        cpFB.setSelCategory();
+        cpFB.SelCategoryOption();
+//        cpFB.SelCategoryOption();
         cpFB.clickcreatebutton();
     }
 }
