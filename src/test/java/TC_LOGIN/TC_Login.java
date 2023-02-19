@@ -26,8 +26,8 @@ public class TC_Login extends BasePage{
   public void loginTest2(){
     /* Test with valid email & password */
     Login logFB = PageFactory.initElements(driver , Login.class);
-    logFB.emaildata("rowida.abasirii@outlook.com");
-    logFB.passworddata("test123@456");
+    logFB.emaildata("FAKEDATA");
+    logFB.passworddata("FAKEDATA");
     logFB.loginButton();
 
   }
