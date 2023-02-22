@@ -19,9 +19,16 @@ public class Login {
   By passwordTextBox = By.name("pass");
   By LoginButton = By.name("login");
 
-//  Should i put it in Welcomepage?
+  //  Should i put it in Welcomepage?
   By SearchBar = By.xpath("//input[@placeholder=\"Search Facebook\"]");
 
+  By viewProfile = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
+
+  By sendMsg = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
+
+//  By ViewProfile = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
+
+//  By SendMsg = By.cssSelector("[class=\"x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip\"]");
 //  By CreatePost = By.cssSelector("[class='x1lkfr7t xkjl1po x1mzt3pk xh8yej3 x13faqbe xi81zsa']");
 //
 //  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
@@ -34,7 +41,7 @@ public class Login {
   //////////////////////////////////////////////////////////
 //  LogOut Section
 
-  By ProfileOption = By.xpath("//*[@id=\"mount_0_0_7E\"]/div/div[1]/div/div[2]/div[3]/div[1]/span/div/div[1]/div/div[2]/div/div[1]/svg");
+  By  profileOption = By.cssSelector("[class=\"x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip x14yjl9h xudhj91 x18nykt9 xww2gxu\"]");
 
   public void emaildata(String emailfield) {
     driver.findElement(emailTextBox).sendKeys(emailfield);
@@ -62,6 +69,14 @@ public class Login {
     driver.findElement(SearchBar).sendKeys(Keys.ENTER);
   }
 
+  public void clickViewProfile(){
+//    driver.findElement(ViewProfile).click();
+      driver.findElement(viewProfile).click();
+  }
+
+  public void setSendMsg(){
+    driver.findElement(sendMsg).click();
+  }
 
 //  public void createpostdata(String Post){
 //    driver.findElement(CreatePost).sendKeys(Post);
@@ -72,9 +87,7 @@ public class Login {
 //  }
   //////////////////////////////////////////////////////////
 //  LogOut Section
-
-  public void profileoption(){
-    driver.findElement(ProfileOption).click();
+  public void setProfileOption(){
+    driver.findElement(profileOption).click();
   }
-
 }

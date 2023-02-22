@@ -11,7 +11,7 @@ import pages.Login;
 
 public class TC_Login extends BasePage{
 
-//  @Test
+  //  @Test
 //  public void loginTest1(){
 //    /* test with invalid email and password */
 //
@@ -22,33 +22,32 @@ public class TC_Login extends BasePage{
 //    Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
 //
 //  }
-  @Test()
-  public void loginTest2(){
-    /* Test with valid email & password */
-    Login logFB = PageFactory.initElements(driver , Login.class);
-    logFB.emaildata("FAKEDATA");
-    logFB.passworddata("FAKEDATA");
-    logFB.loginButton();
-
-  }
-  @Test(dependsOnMethods = "loginTest2")
-  public void logoutTest1(){
-    Login logout = PageFactory.initElements(driver, Login.class);
-//    logout.profileoption();
-    logout.profileoption();
-  }
-
-
 //  @Test
-//  public void loginTest3(){
-//    /* Test with valid data and try to Add someone */
-//    Login logFB = PageFactory.initElements(driver, Login.class);
-//    logFB.emaildata("FAKEDATA");
-//    logFB.passworddata("FAKEDATA");
+//  public void loginTest2(){
+//    /* Test with valid email & password */
+//    Login logFB = PageFactory.initElements(driver , Login.class);
+//    logFB.emaildata("rowida.abasirii@outlook.com");
+//    logFB.passworddata("test123@456");
 //    logFB.loginButton();
-//    logFB.searchbardata("FAKEDATA");
-//    logFB.Enter();
+//    logFB.setProfileOption();
+////    logFB.setProfileOption();
 //  }
+
+
+  @Test
+  public void loginTest3(){
+    /* Test with valid data and try to Add someone */
+    Login logFB = PageFactory.initElements(driver, Login.class);
+    logFB.emaildata("rowida.abasirii@outlook.com");
+    logFB.passworddata("test123@456");
+    logFB.loginButton();
+    logFB.searchbardata("ruwida muhammad");
+    logFB.Enter();
+//    logFB.clickViewProfile();
+//    logFB.clickViewProfile();
+    logFB.clickViewProfile();
+    logFB.setSendMsg();
+  }
 //  @Test
 //  public void loginTest4(){
 //    /* Test to create a new post */
@@ -61,5 +60,4 @@ public class TC_Login extends BasePage{
 //  }
 
 }
-
 
