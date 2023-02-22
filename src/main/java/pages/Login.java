@@ -22,7 +22,8 @@ public class Login {
   //  Should i put it in Welcomepage?
   By SearchBar = By.xpath("//input[@placeholder=\"Search Facebook\"]");
 
-  By viewProfile = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
+  By viewProfile = By.linkText("href=\"https://www.facebook.com/profile.php?id=100086945332367\"");
+//  By viewProfile = By.xpath("//a*[@aria-label=\"View profile\"]");
 
   By sendMsg = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
 

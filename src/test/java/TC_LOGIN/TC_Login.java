@@ -43,10 +43,8 @@ public class TC_Login extends BasePage{
     logFB.loginButton();
     logFB.searchbardata("ruwida muhammad");
     logFB.Enter();
-//    logFB.clickViewProfile();
-//    logFB.clickViewProfile();
     logFB.clickViewProfile();
-    logFB.setSendMsg();
+
   }
 //  @Test
 //  public void loginTest4(){
