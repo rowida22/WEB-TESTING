@@ -30,7 +30,10 @@ public class Login {
 //  By ViewProfile = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
 
 //  By SendMsg = By.cssSelector("[class=\"x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip\"]");
-//  By CreatePost = By.cssSelector("[class='x1lkfr7t xkjl1po x1mzt3pk xh8yej3 x13faqbe xi81zsa']");
+/////////////////////////////////////////////////////////
+  //TestCase 4
+
+  By CreatePost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
 //
 //  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
 
@@ -79,9 +82,14 @@ public class Login {
     driver.findElement(sendMsg).click();
   }
 
-//  public void createpostdata(String Post){
-//    driver.findElement(CreatePost).sendKeys(Post);
-//  }
+  public void clickPost(){
+    driver.findElement(CreatePost).sendKeys(Keys.ENTER);
+  }
+  public void createpostdata(String Post){
+    driver.findElement(CreatePost).sendKeys(Post);
+  }
+
+
 //
 //  public void clickpostbutton(){
 //    driver.findElement(PostButton).click();
