@@ -13,7 +13,7 @@ import pages.WelcomePage;
 public class TC_Login extends BasePage{
 
   //  @Test
-//  public void loginTest1(){
+//  public void loginTest1(){ //Done
 //    /* test with invalid email and password */
 //
 //    Login logFB = PageFactory.initElements(driver, Login.class);
@@ -24,7 +24,7 @@ public class TC_Login extends BasePage{
 //
 //  }
 //  @Test
-//  public void loginTest2(){
+//  public void loginTest2(){ //Done
 //    /* Test with valid email & password */
 //    Login logFB = PageFactory.initElements(driver , Login.class);
 //    logFB.emaildata("FAKEDATA");
@@ -36,7 +36,7 @@ public class TC_Login extends BasePage{
 
 
   @Test
-  public void loginTest3(){
+  public void loginTest3(){ //Almost Done
     /* Test with valid data and try to Add someone */
     Login logFB = PageFactory.initElements(driver, Login.class);
     WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
@@ -50,7 +50,7 @@ public class TC_Login extends BasePage{
   }
 
 //  @Test
-//  public void loginTest4(){
+//  public void loginTest4(){ //Never
 //    /* Test to create a new post */
 //    Login logFB = PageFactory.initElements(driver, Login.class);
 //    logFB.emaildata("rowida.abasirii@outlook.com");

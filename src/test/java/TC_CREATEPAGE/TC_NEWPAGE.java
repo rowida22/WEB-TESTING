@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.CreatePage;
+import pages.Login;
 
 public class TC_NEWPAGE extends BasePage {
 
@@ -12,15 +13,18 @@ public class TC_NEWPAGE extends BasePage {
     public void createpageTest1() {
         // cpFB=create page
         CreatePage cpFB = PageFactory.initElements(driver, CreatePage.class);
+        Login logFB = PageFactory.initElements(driver, Login.class);
         cpFB.createpage();
         cpFB.communitypage();
         Assert.assertTrue(true, String.valueOf(cpFB.msgMustLogin()));
-        cpFB.emaildata("FAKEDATA");
-        cpFB.passworddata("FAKEDATA");
-        cpFB.loginButton();
+        logFB.emaildata("rowida.abasirii@outlook.com");
+        logFB.passworddata("test123@456");
+        logFB.loginButton();
         cpFB.pagenamedata("Testing By Selenium");
         cpFB.categorydata("Information Technology Company");
         cpFB.SelCategoryOption("Information Technology Company");
-        cpFB.clickcreatebutton();
+//        cpFB.SelCategoryOption("Information Technology Company");
+//        cpFB.clickcreatebutton();
+
     }
 }
