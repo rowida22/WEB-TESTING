@@ -65,19 +65,6 @@ public class Login {
 
   }
 
-  public void searchbardata(String SerachForAcc){
-    driver.findElement(SearchBar).sendKeys(SerachForAcc);
-
-  }
-  public void Enter(){
-    driver.findElement(SearchBar).sendKeys(Keys.ENTER);
-  }
-
-  public void clickViewProfile(){
-//    driver.findElement(ViewProfile).click();
-      driver.findElement(viewProfile).click();
-  }
-
   public void setSendMsg(){
     driver.findElement(sendMsg).click();
   }

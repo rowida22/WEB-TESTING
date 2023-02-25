@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import pages.BasePage;
 import pages.Login;
+import pages.WelcomePage;
 
 public class TC_Login extends BasePage{
 
@@ -34,32 +35,33 @@ public class TC_Login extends BasePage{
 //  }
 
 
-//  @Test
-//  public void loginTest3(){
-//    /* Test with valid data and try to Add someone */
-//    Login logFB = PageFactory.initElements(driver, Login.class);
-//    logFB.emaildata("FAKEDATA");
-//    logFB.passworddata("FAKEDATA");
-//    logFB.loginButton();
-//    logFB.searchbardata("ruwida muhammad");
-//    logFB.Enter();
-//    logFB.clickViewProfile();
-//
-//  }
-
   @Test
-  public void loginTest4(){
-    /* Test to create a new post */
+  public void loginTest3(){
+    /* Test with valid data and try to Add someone */
     Login logFB = PageFactory.initElements(driver, Login.class);
-    logFB.emaildata("rowida.abasirii@outlook.com");
-    logFB.passworddata("test123@456");
+    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
+    logFB.emaildata("FakeData");
+    logFB.passworddata("FakeData");
     logFB.loginButton();
-    logFB.clickPost();
-    logFB.createpostdata("Blahhhhh");
-//    logFB.createpostdata("Hello Guys I am Junior Software Tester");
-//    logFB.createpostdata("Hello Guys I am Junior Software Tester");
-//    logFB.clickpostbutton();
+    welpg.searchbardata("FakeData");
+    welpg.Enter();
+    welpg.clickViewProfile();
+
   }
+
+//  @Test
+//  public void loginTest4(){
+//    /* Test to create a new post */
+//    Login logFB = PageFactory.initElements(driver, Login.class);
+//    logFB.emaildata("rowida.abasirii@outlook.com");
+//    logFB.passworddata("test123@456");
+//    logFB.loginButton();
+//    logFB.clickPost();
+//    logFB.createpostdata("Blahhhhh");
+////    logFB.createpostdata("Hello Guys I am Junior Software Tester");
+////    logFB.createpostdata("Hello Guys I am Junior Software Tester");
+////    logFB.clickpostbutton();
+//  }
 
 }
 
