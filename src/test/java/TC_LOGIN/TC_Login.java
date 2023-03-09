@@ -14,7 +14,7 @@ public class TC_Login extends BasePage {
 
     @Test
   public void loginTest1(){ //Done
-    /* test with invalid email and password */
+    /*This test case To verify Login functionality with all invaild data. loginTest1*/
 
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("test@123");
@@ -23,16 +23,18 @@ public class TC_Login extends BasePage {
     Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
 
   }
-//  @Test
-//  public void loginTest2(){ //Done
-//    /* Test with valid email & password */
-//    Login logFB = PageFactory.initElements(driver , Login.class);
-//    logFB.emaildata("FAKEDATA");
-//    logFB.passworddata("FAKEDATA");
-//    logFB.loginButton();
+  @Test
+  public void loginTest2(){ //Not yet
+    /*This test case To verify Login functionality with all vaild data. loginTest2*/
+    Login logFB = PageFactory.initElements(driver , Login.class);
+    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
+    logFB.emaildata("Rowida.abasirii@outlook.com");
+    logFB.passworddata("test123@456");
+    logFB.loginButton();
+//    welpg.SlogOut();
 //    logFB.setProfileOption();
-////    logFB.setProfileOption();
-//  }
+//    logFB.setProfileOption();
+  }
 
 
 //  @Test

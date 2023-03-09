@@ -12,7 +12,7 @@ public class TC_Registration extends BasePageREG {
 
     @Test
     public void regTest1(){
-        /*this test case To verify Registration functionality with all vaild data. regTest1*/
+        /*This test case To verify Registration functionality with all vaild data. regTest1*/
         Registration regFB = PageFactory.initElements(driver, Registration.class);
         regFB.fnamedata("mai");
         regFB.lnamedata("ahmed");
@@ -27,7 +27,7 @@ public class TC_Registration extends BasePageREG {
     }
     @Test
     public void regTest2(){
-        /*this test case To verify Registration functionality with all invaild data. regTest1*/
+        /*This test case To verify Registration functionality with all invaild data. regTest1*/
      Registration regFB = PageFactory.initElements(driver , pages.Registration.class);
      regFB.fnamedata("test");
      regFB.lnamedata("Selenium");
@@ -43,7 +43,7 @@ public class TC_Registration extends BasePageREG {
     }
     @Test
     public void regTest3(){
-        /*this test case To verify Registration functionality with less 6 characters . regTest1*/
+        /*This test case To verify Registration functionality with less 6 characters in Password field. regTest1*/
         Registration regFB = PageFactory.initElements(driver , pages.Registration.class);
         regFB.fnamedata("aya");
         regFB.lnamedata("mahmoud");

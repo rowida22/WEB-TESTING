@@ -39,7 +39,7 @@ public class BasePage {
     driver.navigate().to("https://www.facebook.com");
 
     login = new Login(driver);
-    
+
   }
 //  public void checkAlert() {
 //    try {
@@ -52,21 +52,21 @@ public class BasePage {
 //    }
 //  }
 
-  @AfterClass
-  public void tearDown() {
-    driver.quit();
-
-  }
-
-  @AfterMethod
-  public void takeScreenShot() {
-    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-    try {
-      FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
-
-  }
+//  @AfterClass
+//  public void tearDown() {
+//    driver.quit();
+//
+//  }
+//
+//  @AfterMethod
+//  public void takeScreenShot() {
+//    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//    try {
+//      FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
+//    } catch (IOException e) {
+//      throw new RuntimeException(e);
+//    }
+//
+//  }
 
 }
