@@ -58,5 +58,5 @@ public class TC_Registration extends BasePageREG {
         Assert.assertTrue(true , String.valueOf(regFB.errorPass()));
     }
 
-    
+
 }

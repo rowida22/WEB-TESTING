@@ -2,8 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import java.lang.String;
 
@@ -26,12 +24,8 @@ public class Registration {
     By selYear = By.id("year");
     By GenderFemale = By.cssSelector("[class='_8esa']");
     By SignupButton = By.cssSelector("[name='websubmit']");
-
     By humError = By.id("reg_error_inner");
-
     By Passlimit = By.cssSelector("[class=\"_58mo\"]");
-
-    // may we should put mytouch on it a lil edit
     public void fnamedata(String fname){
         driver.findElement(FnameTextBox).sendKeys(fname);
     }
@@ -48,23 +42,19 @@ public class Registration {
         driver.findElement(passwordTextBox).sendKeys(password);
     }
 
-//    public void SelDayMonthYear(int day , int month , int year){
-//        driver.findElement(selDay.selectByValue());
-//    }
+
     public void selday(String day){
         Select daydropdown = new Select(driver.findElement(selDay));
         daydropdown.selectByValue(day);
-//       selDay.selectByValue(day);
+
     }
     public void selmonth(String month){
         Select monthdropdown = new Select(driver.findElement(selMonth));
         monthdropdown.selectByValue(month);
-//        selMonth.selectByValue(month);
     }
     public void selyear(String year){
         Select yeardropdown = new Select(driver.findElement(selYear));
         yeardropdown.selectByValue(year);
-//        selYear.selectByValue(year);
     }
     public void genderfemale(){
         driver.findElement(GenderFemale).click();
