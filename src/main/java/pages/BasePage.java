@@ -43,8 +43,6 @@ public class BasePage {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
     driver.navigate().to("https://www.facebook.com/");
     login = new Login(driver);
-
-
   }
   public void checkAlert() {
     try {

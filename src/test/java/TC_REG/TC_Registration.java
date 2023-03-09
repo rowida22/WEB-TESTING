@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.BasePageREG;
 import pages.Registration;
 
+
 public class TC_Registration extends BasePageREG {
 
     @Test
@@ -55,10 +56,7 @@ public class TC_Registration extends BasePageREG {
         regFB.genderfemale();
         regFB.signupbutton();
         Assert.assertTrue(true , String.valueOf(regFB.errorPass()));
-
-
     }
 
-
-
+    
 }
