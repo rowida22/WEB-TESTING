@@ -12,17 +12,17 @@ import pages.WelcomePage;
 
 public class TC_Login extends BasePage {
 
-  //  @Test
-//  public void loginTest1(){ //Done
-//    /* test with invalid email and password */
-//
-//    Login logFB = PageFactory.initElements(driver, Login.class);
-//    logFB.emaildata("test@123");
-//    logFB.passworddata("123456");
-//    logFB.loginButton();
-//    Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
-//
-//  }
+    @Test
+  public void loginTest1(){ //Done
+    /* test with invalid email and password */
+
+    Login logFB = PageFactory.initElements(driver, Login.class);
+    logFB.emaildata("test@123");
+    logFB.passworddata("123456");
+    logFB.loginButton();
+    Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
+
+  }
 //  @Test
 //  public void loginTest2(){ //Done
 //    /* Test with valid email & password */

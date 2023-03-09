@@ -22,20 +22,9 @@ public class BasePageREG {
     Registration Registration;
     @BeforeClass
     public void setUp() {
-//        WebDriverManager.chromedriver().driverVersion("109.0.5414.74").setup();
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.get("https://www.google.com");
-//        driver.switchTo().newWindow(WindowType.TAB);
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-//options.addArguments("--headless");
         options.addArguments("--disable-notifications");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -48,22 +37,24 @@ public class BasePageREG {
         driver.switchTo().newWindow(WindowType.TAB);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
         driver.navigate().to("https://www.facebook.com/signup");
+
+
         Registration = new Registration(driver);
 
     }
 
-//    @AfterClass
-//    public void tearDown(){
-//        driver.quit();
-//    }
-//    @AfterMethod
-//    public void takeScreenShot(){
-//        File R1img = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        try {
-//            FileUtils.copyFile(R1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\R1img.png"));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
+    @AfterMethod
+    public void takeScreenShot(){
+        File R1img = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(R1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\R1img.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
