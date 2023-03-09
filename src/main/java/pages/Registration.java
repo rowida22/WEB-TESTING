@@ -26,6 +26,10 @@ public class Registration {
     By GenderFemale = By.cssSelector("[class='_8esa']");
     By SignupButton = By.cssSelector("[name='websubmit']");
 
+    By humError = By.id("reg_error_inner");
+
+    By Passlimit = By.cssSelector("[class=\"_58mo\"]");
+
     // may we should put mytouch on it a lil edit
     public void fnamedata(String fname){
         driver.findElement(FnameTextBox).sendKeys(fname);
@@ -66,6 +70,15 @@ public class Registration {
     }
     public void signupbutton(){
         driver.findElement(SignupButton).click();
+    }
+
+    public boolean errorPass(){
+        return driver.findElement(Passlimit).isDisplayed();
+    }
+
+    public boolean humanErrorMsg()
+    {
+        return driver.findElement(humError).isDisplayed();
     }
 
 }

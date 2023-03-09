@@ -33,8 +33,9 @@ public class Login {
 /////////////////////////////////////////////////////////
   //TestCase 4
 
-  By CreatePost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
-//
+    By createPost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
+
+//  By CreatePost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
 //  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
 
 //  @FindBy(name = "email") WebElement emailTextBox;
@@ -70,10 +71,14 @@ public class Login {
   }
 
   public void clickPost(){
-    driver.findElement(CreatePost).sendKeys(Keys.ENTER);
+      driver.findElement(createPost).click();
   }
+
+//  public void clickPost(){
+//    driver.findElement(CreatePost).sendKeys(Keys.ENTER);
+//  }
   public void createpostdata(String Post){
-    driver.findElement(CreatePost).sendKeys(Post);
+    driver.findElement(createPost).sendKeys(Post);
   }
 
 
