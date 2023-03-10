@@ -16,10 +16,8 @@ public class WelcomePage {
     }
 //    By tryLogOut = By.xpath("//*[@id=\"mount_0_0_cG\"]/div/div[1]/div/div[2]/div[3]/div[1]/span/div/div[1]/div/svg/g/circle");
 
-    By tryLogOut = By.className("x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip x14yjl9h xudhj91 x18nykt9 xww2gxu");
-    public void SlogOut (){
-        driver.findElement(tryLogOut).click();
-    }
+    By tryLogOut = By.className("x1pwv2dq xvlca1e xbh8q5q");
+
 
 
 
@@ -35,6 +33,9 @@ public class WelcomePage {
         //    By ADD = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft\"]");
 
 
+        public void SlogOut (){
+        driver.findElement(tryLogOut).click();
+    }
 
     public void searchbardata(String addSomeone){
         driver.findElement(SearchBar).sendKeys(addSomeone);

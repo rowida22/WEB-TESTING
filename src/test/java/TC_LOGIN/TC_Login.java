@@ -23,33 +23,51 @@ public class TC_Login extends BasePage {
     Assert.assertTrue(String.valueOf(logFB.forgetPass()),true);
 
   }
+
   @Test
-  public void loginTest2(){ //Not yet
+  public void loginTest2(){
     /*This test case To verify Login functionality with all vaild data. loginTest2*/
-    Login logFB = PageFactory.initElements(driver , Login.class);
-    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
-    logFB.emaildata("Rowida.abasirii@outlook.com");
-    logFB.passworddata("test123@456");
-    logFB.loginButton();
-//    welpg.SlogOut();
-//    logFB.setProfileOption();
-//    logFB.setProfileOption();
+
+      Login logfb = PageFactory.initElements(driver , Login.class);
+      logfb.emaildata("rowida.abasirii@outlook.com");
+      logfb.passworddata("test123@456");
+      logfb.loginButton();
+      logfb.clickPost();
+//    logfb.createpostdata("Hello guys i am a little tester");
+//      logfb.SlogOut();
+//    logfb.createpostdata("Hello guys i am a little tester");
+    logfb.createpostdata("Hello guys i am a little tester");
+//    logfb.clickpostbutton();
+
   }
 
-
 //  @Test
-//  public void loginTest3(){ //Almost Done
-//    /* Test with valid data and try to Add someone */
+//  public void loginTest2(){ //Not yet
+//    /*This test case To verify Login functionality with all vaild data. loginTest2*/
 //    Login logFB = PageFactory.initElements(driver, Login.class);
-//    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
-//    logFB.emaildata("FakeData");
-//    logFB.passworddata("FakeData");
+//    logFB.emaildata("Rowida.abasirii@outlook.com");
+//    logFB.passworddata("test123@456");
 //    logFB.loginButton();
-//    welpg.searchbardata("FakeData");
-//    welpg.Enter();
-//    welpg.clickViewProfile();
-//
+//    logFB.SlogOut();
+////    welpg.SlogOut();
+////    logFB.setProfileOption();
+////    logFB.setProfileOption();
 //  }
+
+
+  @Test
+  public void loginTest3(){ //Almost Done
+    /* Test with valid data and try to Add someone */
+    Login logFB = PageFactory.initElements(driver, Login.class);
+    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
+    logFB.emaildata("rowida.abasirii@outlook.com");
+    logFB.passworddata("test123@456");
+    logFB.loginButton();
+    welpg.searchbardata("ruwida muhammad");
+    welpg.Enter();
+    welpg.clickViewProfile();
+
+  }
 
   @Test
   public void loginTest4() { //Never

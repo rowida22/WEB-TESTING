@@ -19,6 +19,8 @@ public class Login {
   By passwordTextBox = By.name("pass");
   By LoginButton = By.name("login");
 
+
+
   //  Should i put it in Welcomepage?
   By SearchBar = By.xpath("//input[@placeholder=\"Search Facebook\"]");
 
@@ -35,8 +37,10 @@ public class Login {
 
     By createPost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
 
+    By dataPost = By.cssSelector("[class=\"xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8\"]");
+
 //  By CreatePost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
-//  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
+  By PostButton = By.cssSelector("[class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
 
 //  @FindBy(name = "email") WebElement emailTextBox;
 //  @FindBy(name = "pass") WebElement passwordTextBox;
@@ -47,6 +51,8 @@ public class Login {
 //  LogOut Section
 
   By  profileOption = By.cssSelector("[class=\"x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip x14yjl9h xudhj91 x18nykt9 xww2gxu\"]");
+//////////////////////
+//  Login
 
   public void emaildata(String emailfield) {
     driver.findElement(emailTextBox).sendKeys(emailfield);
@@ -66,6 +72,8 @@ public class Login {
 
   }
 
+
+
   public void setSendMsg(){
     driver.findElement(sendMsg).click();
   }
@@ -78,14 +86,14 @@ public class Login {
 //    driver.findElement(CreatePost).sendKeys(Keys.ENTER);
 //  }
   public void createpostdata(String Post){
-    driver.findElement(createPost).sendKeys(Post);
+    driver.findElement(dataPost).sendKeys(Post);
   }
 
 
-//
-//  public void clickpostbutton(){
-//    driver.findElement(PostButton).click();
-//  }
+
+  public void clickpostbutton(){
+    driver.findElement(PostButton).click();
+  }
   //////////////////////////////////////////////////////////
 //  LogOut Section
   public void setProfileOption(){
