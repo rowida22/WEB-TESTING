@@ -12,9 +12,9 @@ import pages.WelcomePage;
 
 public class TC_Login extends BasePage {
 
-    @Test
+  @Test
   public void loginTest1(){ //Done
-    /*This test case To verify Login functionality with all invaild data. loginTest1*/
+    /*This test case To verify Login functionality with all invalid data. loginTest1*/
 
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("test@123");
@@ -25,64 +25,48 @@ public class TC_Login extends BasePage {
   }
 
   @Test
-  public void loginTest2(){
-    /*This test case To verify Login functionality with all vaild data. loginTest2*/
+  public void loginTest2(){//Done
+    /*This test case To verify Login functionality with all valid data and try to create post. loginTest2*/
 
-      Login logfb = PageFactory.initElements(driver , Login.class);
-      logfb.emaildata("rowida.abasirii@outlook.com");
-      logfb.passworddata("test123@456");
-      logfb.loginButton();
-      logfb.clickPost();
-//    logfb.createpostdata("Hello guys i am a little tester");
-//      logfb.SlogOut();
-//    logfb.createpostdata("Hello guys i am a little tester");
-    logfb.createpostdata("Hello guys i am a little tester");
-//    logfb.clickpostbutton();
-
-  }
-
-//  @Test
-//  public void loginTest2(){ //Not yet
-//    /*This test case To verify Login functionality with all vaild data. loginTest2*/
-//    Login logFB = PageFactory.initElements(driver, Login.class);
-//    logFB.emaildata("Rowida.abasirii@outlook.com");
-//    logFB.passworddata("test123@456");
-//    logFB.loginButton();
-//    logFB.SlogOut();
-////    welpg.SlogOut();
-////    logFB.setProfileOption();
-////    logFB.setProfileOption();
-//  }
-
-
-  @Test
-  public void loginTest3(){ //Almost Done
-    /* Test with valid data and try to Add someone */
-    Login logFB = PageFactory.initElements(driver, Login.class);
-    WelcomePage welpg = PageFactory.initElements(driver, WelcomePage.class);
+    Login logFB = PageFactory.initElements(driver , Login.class);
     logFB.emaildata("rowida.abasirii@outlook.com");
     logFB.passworddata("test123@456");
     logFB.loginButton();
-    welpg.searchbardata("ruwida muhammad");
-    welpg.Enter();
-    welpg.clickViewProfile();
+    logFB.clickPost();
+    logFB.createpostdata("Selenium Webdriver");
+    logFB.clickpostbutton();
+
+  }
+
+
+  @Test
+  public void loginTest3(){ //Done
+    /*This test case To verify Login functionality to Add someone. loginTest3*/
+
+    Login logFB = PageFactory.initElements(driver, Login.class);
+    logFB.emaildata("rowida.abasirii@outlook.com");
+    logFB.passworddata("test123@456");
+    logFB.loginButton();
+    logFB.SearchBarData("ruwida muhammad");
+    logFB.Enter();
+    logFB.clickViewProfile();
+    logFB.Add();
 
   }
 
   @Test
   public void loginTest4() { //Never
-    /* Test to create a new post */
+    /*This test case To verify Logout functionality. loginTest4*/
+
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("rowida.abasirii@outlook.com");
     logFB.passworddata("test123@456");
     logFB.loginButton();
-//    logFB.clickPost();
-//    logFB.clickPost();
-    logFB.clickPost();
-//    logFB.createpostdata("Blahhhhh");
-//    logFB.createpostdata("Hello Guys I am Junior Software Tester");
-//    logFB.createpostdata("Hello Guys I am Junior Software Tester");
-//    logFB.clickpostbutton();
+    logFB.clickSendNewMsg();
+//    logFB.GuyNameData("ruwida muhammad");
+    logFB.UrProfile();
+//    logFB.Logout();
+      logFB.Logout();
   }
 }
 

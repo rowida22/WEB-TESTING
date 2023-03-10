@@ -40,9 +40,7 @@ public class WelcomePage {
     public void searchbardata(String addSomeone){
         driver.findElement(SearchBar).sendKeys(addSomeone);
     }
-    public void Enter(){
-        driver.findElement(SearchBar).sendKeys(Keys.ENTER);
-    }
+
 
     public void clickViewProfile(){
         driver.findElement(ViewProfile).click();

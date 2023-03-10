@@ -41,32 +41,22 @@ public class BasePage {
     login = new Login(driver);
 
   }
-//  public void checkAlert() {
-//    try {
-//      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
-//      wait.until(ExpectedConditions.alertIsPresent());
-//      Alert alert = driver.switchTo().alert();
-//      alert.accept();
-//    } catch (Exception e) {
-//      //exception handling
-//    }
-//  }
+  
+ @AfterClass
+ public void tearDown() {
+   driver.quit();
 
-//  @AfterClass
-//  public void tearDown() {
-//    driver.quit();
-//
-//  }
-//
-//  @AfterMethod
-//  public void takeScreenShot() {
-//    File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//    try {
-//      FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
-//    } catch (IOException e) {
-//      throw new RuntimeException(e);
-//    }
-//
-//  }
+ }
+
+ @AfterMethod
+ public void takeScreenShot() {
+   File L1img = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+   try {
+     FileUtils.copyFile(L1img, new File("I:\\New folder\\WEB-TESTING\\ScreenShot\\L1img.png"));
+   } catch (IOException e) {
+     throw new RuntimeException(e);
+   }
+
+ }
 
 }
