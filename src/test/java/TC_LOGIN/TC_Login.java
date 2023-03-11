@@ -1,14 +1,11 @@
 package TC_LOGIN;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import pages.BasePage;
 import pages.Login;
-import pages.WelcomePage;
 
 public class TC_Login extends BasePage {
 

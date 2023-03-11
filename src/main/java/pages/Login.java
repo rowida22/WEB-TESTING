@@ -24,14 +24,7 @@ public class Login {
   By createPost = By.cssSelector("[class=\"x1lliihq x6ikm8r x10wlt62 x1n2onr6\"]");
   By dataPost = By.cssSelector("[class=\"xdj266r x11i5rnm xat24cr x1mh8g0r x16tdsg8\"]");
   By PostButton = By.cssSelector("[aria-label=\"Post\"]");
-
-  By NewMsg = By.cssSelector("[aria-label=\"New message\"]");
-
-//  By GuyName = By.id("jsc_c_9f");
-//  By GuyName = By.cssSelector("[class=\"x193iq5w x6ikm8r x10wlt62 x1ed109x\"]");
-
   By UrProfileLogout = By.cssSelector("[aria-label=\"Your profile\"]");
-//    By LogOut = By.cssSelector("[aria-label=\"Log Out\"]");
   By LogOut = By.cssSelector("[class=\"x78zum5 xdt5ytf xz62fqu x16ldp7u\"]");
 
 //  @FindBy(name = "email") WebElement emailTextBox;
@@ -62,18 +55,11 @@ public class Login {
 
   }
 
-
-
-//  public void setSendMsg(){
-//    driver.findElement(sendMsg).click();
-//  }
 /////////////////////////////////////////////////////////////////
 //  Create post
   public void clickPost(){
       driver.findElement(createPost).click();
   }
-
-
   public void createpostdata(String Post){
     driver.findElement(dataPost).sendKeys(Post);
   }
@@ -96,14 +82,6 @@ public class Login {
   public void Add(){
     driver.findElement(AddSomeone).click();
   }
-  //////////////////////////////////////////////////////////
-//  Send Msg
-  public void clickSendNewMsg(){
-    driver.findElement(NewMsg).click();
-  }
-//  public void GuyNameData(String Name){
-//    driver.findElement(GuyName).sendKeys(Name);
-//  }
 
   //////////////////////////////////////////////////////////
 //  LogOut Section
@@ -115,8 +93,5 @@ public class Login {
   public void Logout(){
     driver.findElement(LogOut).click();
   }
-
-
-
 
 }
