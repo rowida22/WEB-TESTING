@@ -30,8 +30,9 @@ public class Login {
 //  By GuyName = By.id("jsc_c_9f");
 //  By GuyName = By.cssSelector("[class=\"x193iq5w x6ikm8r x10wlt62 x1ed109x\"]");
 
-  By LogOut = By.cssSelector("[class=\"x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip\"]");
   By UrProfileLogout = By.cssSelector("[aria-label=\"Your profile\"]");
+//    By LogOut = By.cssSelector("[aria-label=\"Log Out\"]");
+  By LogOut = By.cssSelector("[class=\"x78zum5 xdt5ytf xz62fqu x16ldp7u\"]");
 
 //  @FindBy(name = "email") WebElement emailTextBox;
 //  @FindBy(name = "pass") WebElement passwordTextBox;

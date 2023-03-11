@@ -41,7 +41,7 @@ public class TC_Login extends BasePage {
 
   @Test
   public void loginTest3(){ //Done
-    /*This test case To verify Login functionality to Add someone. loginTest3*/
+    /*This test case To verify Login functionality to Add someone and Logout. loginTest3*/
 
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("rowida.abasirii@outlook.com");
@@ -62,11 +62,9 @@ public class TC_Login extends BasePage {
     logFB.emaildata("rowida.abasirii@outlook.com");
     logFB.passworddata("test123@456");
     logFB.loginButton();
-    logFB.clickSendNewMsg();
-//    logFB.GuyNameData("ruwida muhammad");
     logFB.UrProfile();
-//    logFB.Logout();
-      logFB.Logout();
+    logFB.Logout();
+
   }
 }
 
