@@ -22,8 +22,8 @@ public class TC_NEWPAGE extends BasePage {
         logFB.loginButton();
         cpFB.pagenamedata("Testing By Selenium");
         cpFB.categorydata("Information Technology Company");
-        cpFB.SelCategoryOption("Information Technology Company");
 //        cpFB.SelCategoryOption("Information Technology Company");
+        cpFB.SelCategoryOption("Information Technology Company");
 //        cpFB.clickcreatebutton();
 
     }

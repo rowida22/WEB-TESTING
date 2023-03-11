@@ -29,7 +29,7 @@ public class TC_Login extends BasePage {
     logFB.passworddata("test123@456");
     logFB.loginButton();
     logFB.clickPost();
-    logFB.createpostdata("test12");
+    logFB.createpostdata("tes");
     logFB.clickpostbutton();
 
   }

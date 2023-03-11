@@ -16,14 +16,15 @@ public class CreatePage {
     By clickCommunityPage = By.cssSelector("[class='_43rm']");
 
     By MsgMustLogin = By.cssSelector("[class=\"_585r _50f4\"]");
-    By PageName = By.id("jsc_c_v");
+    By PageName = By.cssSelector("[aria-label=\"Page name (required)\"]");
 
-    By Category = By.cssSelector("[class='x1jx94hy x8cjs6t x1ch86jh x80vd3b xckqwgs x1268tai x1mxuytg x14hpm34 xqvykr2 x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x178xt8z xm81vs4 xso031l xy80clv x78zum5 xdt5ytf x6ikm8r x10wlt62 x1n2onr6 x1ja2u2z x1egnk41 x1ed109x x1a2a7pz']");
+    By Category = By.cssSelector("[aria-label=\"Category (required)\"]");
 //    By selCategory = By.xpath("//*[@id=\"1130035050388269\"]/div/div[1]/div/div/div/div");
 //    By selCategory = By.xpath("//div[@class='x1yc453h']");
-//    By selCategory = By.cssSelector("[class=\"x1yc453h\"]");
+    By selCategory = By.cssSelector("[class=\"x1yc453h\"]");
 
-    By selCategory = By.xpath("//div[@class=\"x1yc453h\"]");
+//    By selCategory = By.xpath("//div[@class=\"x1yc453h\"]");
+
 
 //    By CreateButton = By.xpath("//spaan[@class='x1lliihq x6ikm8r x10wlt62 x1n2onr6 xlyipyv xuxw1ft']");
     By CreateButton = By.xpath("//div[@aria-label=\"Create Page\"]");
