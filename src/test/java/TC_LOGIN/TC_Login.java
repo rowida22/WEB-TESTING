@@ -3,7 +3,6 @@ package TC_LOGIN;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import pages.BasePage;
 import pages.Login;
 
@@ -30,7 +29,7 @@ public class TC_Login extends BasePage {
     logFB.passworddata("test123@456");
     logFB.loginButton();
     logFB.clickPost();
-    logFB.createpostdata("Selenium Webdriver");
+    logFB.createpostdata("test12");
     logFB.clickpostbutton();
 
   }
@@ -38,7 +37,7 @@ public class TC_Login extends BasePage {
 
   @Test
   public void loginTest3(){ //Done
-    /*This test case To verify Login functionality to Add someone and Logout. loginTest3*/
+    /*This test case To verify Login functionality to Add someone. loginTest3*/
 
     Login logFB = PageFactory.initElements(driver, Login.class);
     logFB.emaildata("rowida.abasirii@outlook.com");
@@ -52,7 +51,7 @@ public class TC_Login extends BasePage {
   }
 
   @Test
-  public void loginTest4() { //Never
+  public void loginTest4() { //Done
     /*This test case To verify Logout functionality. loginTest4*/
 
     Login logFB = PageFactory.initElements(driver, Login.class);
